@@ -26,6 +26,6 @@ public:
 	int getSize();
 	void addPlayer(Player p);
 	int getPlayerScoreByName(string n);
-	Player getHighscorePlayer();
+	Player* getHighscorePlayer();
 };
 #endif

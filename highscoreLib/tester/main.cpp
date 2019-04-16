@@ -12,11 +12,18 @@ void main()
 	momo.name = "momo";
 	momo.score = 40;
 
-	(*hst).addPlayer(tomas);
-	(*hst).addPlayer(momo);
+	hst->addPlayer(tomas);
+	hst->addPlayer(momo);
 
-	cout << (*hst).getPlayerScoreByName(tomas.name) << "-" << tomas.name << endl;
-	cout << (*hst).getPlayerScoreByName(momo.name) << "-" << momo.name << endl;
+	Player* p;
+
+	p = hst->getHighscorePlayer();
+
+	for (int i = 0; i < (*hst).getSize(); i++)
+	{
+		cout << p->name.c_str() << " - " << p->score << endl;
+		p++;
+	}
 
 	delete hst;
 

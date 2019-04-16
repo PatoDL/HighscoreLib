@@ -69,7 +69,7 @@ int HighscoreTable::getPlayerScoreByName(string n)
 	}
 }
 
-Player HighscoreTable::getHighscorePlayer()
+Player* HighscoreTable::getHighscorePlayer()
 {
-	return *bestPlayer;
+	return bestPlayer;
 }
